@@ -8,7 +8,6 @@ const initialState = {
 export const TodoReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TODO:
-            console.log(action)
             return {
                 ...state,
                 todos: [
@@ -20,12 +19,10 @@ export const TodoReducer = (state = initialState, action) => {
                 ]
             }
         case TOGGLE_TODO:
-            console.log(action)
             return {
                 ...state,
                 todos: state.todos.map((todo, index) => {
                     if (index === action.payload) {
-                        console.log(index, " ", action.payload)
                         return {
                             ...todo,
                             completed: !todo.completed,
@@ -41,7 +38,6 @@ export const TodoReducer = (state = initialState, action) => {
 
             }
         case EDIT_TODO:
-            console.log(action)
             return {
                 ...state,
                 todos: state.todos.map((todo, index) => {

@@ -25,7 +25,7 @@ function App() {
             dispatch(editTodo(input, index));
         }
     }
-    console.log(todos)
+
 
     return (
         <div className="main">
